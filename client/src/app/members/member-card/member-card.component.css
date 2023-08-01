@@ -1,0 +1,47 @@
+/* 當滑鼠停在card類別的img中 
+將圖大小站按 1.2 倍進行縮放。
+指定過度效果持續500毫秒(0.5秒)。
+過度效果的時間函數設定為ease-out，縮放效果會快速開始並逐漸減慢。
+將圖像的透明度設定為 0.7 
+*/
+.card:hover img {
+    transform: scale(1.2, 1.2);
+    transition-duration: 500ms;
+    transition-timing-function: ease-out;
+    opacity: 0.7;
+}
+
+/* 未被滑鼠懸停的card類別img中  */
+.card img{
+    transform: scale(1.0, 1.0);
+    transition-duration: 500ms;
+    transition-timing-function: ease-out;
+}
+
+/* 讓圖片放大超過的部分隱藏 */
+.card-img-wrapper{
+    overflow: hidden;
+    position: relative;
+}
+
+ /*  一開始隱藏 */
+.member-icons {
+    position: relative;
+    bottom: -30%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-left: auto;
+    opacity: 0;
+}
+
+/* 滑鼠懸停後顯示 */
+.card-img-wrapper:hover .member-icons{
+    bottom: 0;
+    opacity: 1;
+}
+
+/* 動畫 */
+.animate {
+    transition: all 0.3s ease-in-out;
+}
